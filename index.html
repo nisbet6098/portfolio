@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Nisbet | Security Consultant Portfolio</title>
+    <title>David Nisbet | Security Consultant & Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script>
@@ -17,22 +17,23 @@
         }
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
         body { font-family: 'Inter', sans-serif; transition: all 0.3s ease; scroll-behavior: smooth; }
         .text-gradient {
             background: linear-gradient(135deg, #ffffff 30%, #10b981 100%);
             -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
         }
-        .light .text-gradient {
-            background: linear-gradient(135deg, #111827 30%, #059669 100%);
-            -webkit-background-clip: text; background-clip: text;
+        .dark .text-gradient {
+            background: linear-gradient(135deg, #ffffff 30%, #10b981 100%);
         }
         .card-blur {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             height: 100%;
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
+        .card-blur:hover { border-color: rgba(16, 185, 129, 0.4); transform: translateY(-5px); }
         .light .card-blur {
             background: rgba(0, 0, 0, 0.02);
             border: 1px solid rgba(0, 0, 0, 0.1);
@@ -41,15 +42,14 @@
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
     </style>
 </head>
-<body class="dark bg-[#0a0a0a] text-white light:bg-gray-50 light:text-gray-900">
-    <nav class="fixed w-full z-50 px-6 py-4 bg-black/90 dark:bg-black/90 light:bg-white/90 backdrop-blur-md border-b border-white/10">
+<body class="dark bg-[#0a0a0a] text-white transition-colors duration-300">
+    <nav class="fixed w-full z-50 px-6 py-4 bg-black/90 backdrop-blur-md border-b border-white/10">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <span class="text-2xl font-bold tracking-tighter uppercase">DN<span class="text-emerald-500">.</span></span>
-            <div class="hidden md:flex space-x-6 text-sm font-bold items-center uppercase tracking-widest">
+            <span class="text-2xl font-black tracking-tighter uppercase">DN<span class="text-emerald-500">.</span></span>
+            <div class="hidden md:flex space-x-8 text-xs font-black items-center uppercase tracking-[0.2em]">
                 <a href="#about" class="hover:text-emerald-500 transition">About</a>
                 <a href="#experience" class="hover:text-emerald-500 transition">Experience</a>
-                <a href="#skills" class="hover:text-emerald-500 transition">Skills</a>
-                <a href="#education" class="hover:text-emerald-500 transition">Education</a>
+                <a href="#skills" class="hover:text-emerald-500 transition">Arsenal</a>
                 <a href="#projects" class="hover:text-emerald-500 transition">Projects</a>
                 <a href="#contact" class="hover:text-emerald-500 transition">Contact</a>
                 <button onclick="toggleTheme()" class="p-2 rounded-full bg-white/10 hover:bg-white/20 transition">
@@ -61,97 +61,94 @@
 
     <section class="min-h-screen flex items-center justify-center pt-20 px-6 text-center">
         <div class="max-w-4xl">
-            <div class="inline-block px-4 py-1 border border-emerald-500/30 rounded-full text-emerald-500 text-xs font-bold mb-6 tracking-widest uppercase bg-emerald-500/5">
-                BEng (Hons) Cyber Security & Digital Forensics | 2:1 Upper Class
+            <div class="inline-block px-4 py-1 border border-emerald-500/30 rounded-full text-emerald-500 text-[10px] font-black mb-8 tracking-[0.3em] uppercase bg-emerald-500/5">
+                BEng (Hons) Cyber Security & Digital Forensics | 2:1
             </div>
             <h1 class="text-6xl md:text-8xl font-black mb-6 tracking-tight">
                 Hi, I'm <span class="text-gradient">David Nisbet</span>
             </h1>
-            <p class="text-3xl md:text-4xl text-emerald-500 font-mono mb-8 font-bold">
+            <p class="text-3xl md:text-4xl text-emerald-500 font-mono mb-10 font-bold">
                 <span id="typewriter">Security Consultant</span><span class="cursor">&nbsp;</span>
             </p>
-            <p class="text-xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed">
-                Seasoned Cybersecurity Professional and IASME Accredited Cyber Essentials Practitioner. 
-                Expert in identifying vulnerabilities and securing complex network architectures against modern threats through disciplined manual penetration testing.
+            <p class="text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+                Seasoned Cybersecurity Professional and IASME Accredited Practitioner. 
+                Expert in securing complex architectures through disciplined manual penetration testing and strategic infrastructure engineering.
             </p>
             <div class="flex flex-wrap justify-center gap-6">
-                <a href="#contact" class="bg-emerald-600 hover:bg-emerald-500 text-white px-10 py-4 rounded-full font-bold transition shadow-lg shadow-emerald-900/20">Book a Consultation</a>
-                <a href="#experience" class="bg-white/5 border border-white/10 px-10 py-4 rounded-full font-bold hover:bg-white/10 transition">View My Track Record</a>
+                <a href="#contact" class="bg-emerald-600 hover:bg-emerald-500 text-white px-10 py-5 rounded-2xl font-black uppercase tracking-widest transition shadow-xl shadow-emerald-900/20">Book Consultation</a>
+                <a href="#experience" class="bg-white/5 border border-white/10 px-10 py-5 rounded-2xl font-black uppercase tracking-widest hover:bg-white/10 transition">Track Record</a>
             </div>
         </div>
     </section>
 
     <section id="about" class="py-32 px-6">
         <div class="max-w-5xl mx-auto">
-            <div class="flex flex-col md:flex-row gap-16 items-center">
-                <div class="text-6xl md:text-8xl">🛡️</div>
+            <div class="flex flex-col md:flex-row gap-20 items-center">
+                <div class="text-8xl filter grayscale hover:grayscale-0 transition duration-500">🛡️</div>
                 <div class="text-left">
-                    <h2 class="text-4xl font-bold mb-4">The Strategic Advantage</h2>
-                    <h3 class="text-emerald-500 font-bold text-xl mb-6">Personal Statement</h3>
+                    <h2 class="text-4xl font-black mb-4 uppercase tracking-tight">The Strategic Advantage</h2>
+                    <h3 class="text-emerald-500 font-black text-xs uppercase tracking-[0.3em] mb-8">Personal Statement</h3>
                     <div class="space-y-6 text-gray-400 text-lg leading-relaxed">
-                        <p>I excel at bridging the gap between technical defense and organizational compliance. With 11 years of field experience, I specialize in manual penetration testing and implementing security frameworks like Cyber Essentials, NIST, and ISO 27001.</p>
-                        <p>My career is defined by a <span class="text-white font-bold">"Security-First"</span> approach. Whether directing operations at NTCyber Ltd or serving in high-pressure operational environments with the British Army, I prioritize mission-critical data integrity and technical accuracy.</p>
+                        <p>I excel at bridging the gap between technical defense and organizational compliance. With 11 years of field experience, I specialize in manual penetration testing and implementing security frameworks like <span class="text-white font-bold">Cyber Essentials, NIST, and ISO 27001.</span></p>
+                        <p>My career is defined by a <span class="text-white font-bold">"Security-First"</span> approach. Whether directing operations at NTCyber Ltd or serving in high-pressure operational environments with the British Army, I prioritize mission-critical data integrity.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="py-32 px-6 bg-white/[0.02]">
+    <section id="experience" class="py-32 px-6 bg-white/[0.01]">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-black mb-16 text-center tracking-tight">Professional <span class="text-emerald-500">History</span></h2>
+            <h2 class="text-4xl font-black mb-20 text-center tracking-tight uppercase">Professional <span class="text-emerald-500">History</span></h2>
             <div class="space-y-12">
-                <div class="card-blur p-8 md:p-12 rounded-3xl relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 p-8 text-emerald-500/10 text-8xl font-black group-hover:text-emerald-500/20 transition">2016</div>
+                <div class="card-blur p-8 md:p-12 rounded-[2.5rem] relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-8 text-emerald-500/10 text-9xl font-black group-hover:text-emerald-500/20 transition duration-700">2016</div>
                     <div class="relative z-10">
-                        <div class="flex flex-wrap justify-between items-start mb-8">
+                        <div class="flex flex-wrap justify-between items-start mb-10">
                             <div>
-                                <h3 class="text-3xl font-bold">Cybersecurity Consultant & Practitioner</h3>
-                                <p class="text-emerald-500 text-xl font-bold">NTCyber Ltd</p>
+                                <h3 class="text-3xl font-black mb-2">Cybersecurity Consultant</h3>
+                                <p class="text-emerald-500 text-xl font-bold uppercase tracking-widest">NTCyber Ltd</p>
                             </div>
-                            <span class="bg-emerald-500 text-black px-4 py-1 rounded-full font-bold text-sm">April 2016 - Present </span>
+                            <span class="bg-emerald-500 text-black px-5 py-2 rounded-xl font-black text-xs uppercase tracking-widest">2016 - Present</span>
                         </div>
-                        <ul class="grid md:grid-cols-2 gap-4 text-gray-400">
-                            <li class="flex items-start"><i class="fas fa-check-circle text-emerald-500 mt-1 mr-3"></i> <strong>Cyber Essentials Leadership:</strong> Guiding clients through the full certification lifecycle for CE and CE Plus.</li>
-                            <li class="flex items-start"><i class="fas fa-check-circle text-emerald-500 mt-1 mr-3"></i> <strong>Vulnerability Management:</strong> Focused audits on Firewalls, Secure Config, Access Control, and Patching</li>
-                            <li class="flex items-start"><i class="fas fa-check-circle text-emerald-500 mt-1 mr-3"></i> <strong>Offensive Security:</strong> Manual penetration tests across networks and apps with critical finding communication</li>
-                            <li class="flex items-start"><i class="fas fa-check-circle text-emerald-500 mt-1 mr-3"></i> <strong>Social Engineering:</strong> Designing phishing and vishing campaigns to improve security awareness</li>
+                        <ul class="grid md:grid-cols-2 gap-6 text-gray-400">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-emerald-500 mt-1 mr-4"></i> <strong>Cyber Essentials:</strong> Leading full certification lifecycles for CE and CE Plus.</li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-emerald-500 mt-1 mr-4"></i> <strong>Vulnerability Mgmt:</strong> Technical audits of Firewalls, Access Control, and Patching.</li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-emerald-500 mt-1 mr-4"></i> <strong>Offensive Ops:</strong> Manual penetration testing across networks and applications.</li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-emerald-500 mt-1 mr-4"></i> <strong>Social Engineering:</strong> Designing phishing/vishing campaigns for staff awareness.</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="card-blur p-8 md:p-12 rounded-3xl relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 p-8 text-white/5 text-8xl font-black">2009</div>
+                <div class="card-blur p-8 md:p-12 rounded-[2.5rem] relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-8 text-white/5 text-9xl font-black">2009</div>
                     <div class="relative z-10">
-                        <div class="flex flex-wrap justify-between items-start mb-8">
+                        <div class="flex flex-wrap justify-between items-start mb-10">
                             <div>
-                                <h3 class="text-3xl font-bold">Infantry / CMT</h3>
-                                <p class="text-emerald-500 text-xl font-bold">British Army</p>
+                                <h3 class="text-3xl font-black mb-2">Infantry / CMT</h3>
+                                <p class="text-emerald-500 text-xl font-bold uppercase tracking-widest">British Army</p>
                             </div>
-                            <span class="bg-white/10 text-white px-4 py-1 rounded-full font-bold text-sm">June 2009 - March 2014 </span>
+                            <span class="bg-white/10 text-white px-5 py-2 rounded-xl font-black text-xs uppercase tracking-widest">2009 - 2014</span>
                         </div>
-                        <ul class="grid md:grid-cols-2 gap-4 text-gray-400">
-                            <li class="flex items-start"><i class="fas fa-shield-alt text-emerald-600 mt-1 mr-3"></i> <strong>Operational Resilience:</strong> Maintaining focus in high-stress scenarios applicable to Incident Response.</li>
-                            <li class="flex items-start"><i class="fas fa-shield-alt text-emerald-600 mt-1 mr-3"></i> <strong>Precision & Detail:</strong> 100% accuracy in mission-critical tasks through rigorous SOP adherence.</li>
-                            <li class="flex items-start"><i class="fas fa-shield-alt text-emerald-600 mt-1 mr-3"></i> <strong>Asset Management:</strong> Handling high-value equipment and sensitive information securely.</li>
+                        <ul class="grid md:grid-cols-2 gap-6 text-gray-400">
+                            <li class="flex items-start"><i class="fas fa-shield-alt text-emerald-600 mt-1 mr-4"></i> <strong>Resilience:</strong> Maintaining operational focus in high-stress Incident Response scenarios.</li>
+                            <li class="flex items-start"><i class="fas fa-shield-alt text-emerald-600 mt-1 mr-4"></i> <strong>Precision:</strong> 100% accuracy in mission-critical tasks through rigorous SOPs.</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="card-blur p-8 md:p-12 rounded-3xl relative overflow-hidden group">
-                    <div class="relative z-10">
-                        <div class="flex flex-wrap justify-between items-start mb-8">
-                            <div>
-                                <h3 class="text-3xl font-bold">Security Systems Engineer</h3>
-                                <p class="text-emerald-500 text-xl font-bold">LLC Technical</p>
-                            </div>
-                            <span class="bg-white/10 text-white px-4 py-1 rounded-full font-bold text-sm">Sept 2006 - May 2009 </span>
+                <div class="card-blur p-8 md:p-12 rounded-[2.5rem]">
+                    <div class="flex flex-wrap justify-between items-start mb-10">
+                        <div>
+                            <h3 class="text-3xl font-black mb-2">Security Systems Engineer</h3>
+                            <p class="text-emerald-500 text-xl font-bold uppercase tracking-widest">LLC Technical</p>
                         </div>
-                        <ul class="grid md:grid-cols-2 gap-4 text-gray-400">
-                            <li class="flex items-start"><i class="fas fa-tools text-gray-500 mt-1 mr-3"></i> <strong>Physical Infrastructure:</strong> Implementing CCTV (IPv4/v6) and access control (Videx/Paxton).</li>
-                            <li class="flex items-start"><i class="fas fa-tools text-gray-500 mt-1 mr-3"></i> <strong>Technical Deployment:</strong> Full-cycle installation of CAT5/6 and fiber optics for connectivity.</li>
-                        </ul>
+                        <span class="bg-white/10 text-white px-5 py-2 rounded-xl font-black text-xs uppercase tracking-widest">2006 - 2009</span>
                     </div>
+                    <ul class="grid md:grid-cols-2 gap-6 text-gray-400">
+                        <li class="flex items-start"><i class="fas fa-tools text-gray-600 mt-1 mr-4"></i> <strong>Infrastructure:</strong> Deploying IPv4/v6 CCTV and physical Access Control (Paxton).</li>
+                        <li class="flex items-start"><i class="fas fa-tools text-gray-600 mt-1 mr-4"></i> <strong>Deployment:</strong> Full-cycle installation of CAT5/6 and fiber optic backbones.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -159,153 +156,152 @@
 
     <section id="skills" class="py-32 px-6">
         <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-4xl font-black mb-16 uppercase tracking-widest">Technical <span class="text-emerald-500">Arsenal</span></h2>
+            <h2 class="text-4xl font-black mb-20 uppercase tracking-[0.2em]">Technical <span class="text-emerald-500">Arsenal</span></h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="card-blur p-8 rounded-3xl text-left border-b-4 border-emerald-500">
-                    <h3 class="text-xl font-bold mb-6 uppercase text-emerald-500">Frameworks</h3>
-                    <ul class="space-y-3 text-sm font-bold text-gray-400 uppercase tracking-tighter">
+                    <h3 class="text-xl font-black mb-6 uppercase text-emerald-500 tracking-widest">Compliance</h3>
+                    <ul class="space-y-3 text-xs font-black text-gray-400 uppercase tracking-widest">
                         <li>Cyber Essentials & Plus</li>
+                        <li>IASME Governance</li>
                         <li>NIST Framework</li>
-                        <li>ISO 27001</li>
+                        <li>ISO 27001 Auditing</li>
                     </ul>
                 </div>
                 <div class="card-blur p-8 rounded-3xl text-left border-b-4 border-emerald-500">
-                    <h3 class="text-xl font-bold mb-6 uppercase text-emerald-500">Offensive</h3>
-                    <ul class="space-y-3 text-sm font-bold text-gray-400 uppercase tracking-tighter">
+                    <h3 class="text-xl font-black mb-6 uppercase text-emerald-500 tracking-widest">Offensive</h3>
+                    <ul class="space-y-3 text-xs font-black text-gray-400 uppercase tracking-widest">
+                        <li>Tiger Teaming</li>
                         <li>Network Pen-Testing</li>
-                        <li>Phishing/Vishing</li>
-                        <li>Physical Security</li>
+                        <li>Kali & Metasploit</li>
+                        <li>Nessus Pro</li>
                     </ul>
                 </div>
                 <div class="card-blur p-8 rounded-3xl text-left border-b-4 border-emerald-500">
-                    <h3 class="text-xl font-bold mb-6 uppercase text-emerald-500">Tools</h3>
-                    <ul class="space-y-3 text-sm font-bold text-gray-400 uppercase tracking-tighter">
-                        <li>Kali Linux & Metasploit</li>
-                        <li>Nessus Professional</li>
-                        <li>Burp Suite / OWASP ZAP</li>
+                    <h3 class="text-xl font-black mb-6 uppercase text-emerald-500 tracking-widest">Defensive</h3>
+                    <ul class="space-y-3 text-xs font-black text-gray-400 uppercase tracking-widest">
+                        <li>Wazuh SIEM / SOC</li>
+                        <li>TP-Link Omada (VLAN)</li>
+                        <li>Docker Virtualization</li>
+                        <li>Zero Trust Arch</li>
                     </ul>
                 </div>
                 <div class="card-blur p-8 rounded-3xl text-left border-b-4 border-emerald-500">
-                    <h3 class="text-xl font-bold mb-6 uppercase text-emerald-500">Compliance</h3>
-                    <ul class="space-y-3 text-sm font-bold text-gray-400 uppercase tracking-tighter">
-                        <li>Vulnerability Scanning</li>
-                        <li>Remediation Strategy</li>
-                        <li>Audit Management</li>
+                    <h3 class="text-xl font-black mb-6 uppercase text-emerald-500 tracking-widest">Development</h3>
+                    <ul class="space-y-3 text-xs font-black text-gray-400 uppercase tracking-widest">
+                        <li>HTML5 / JS / Tailwind</li>
+                        <li>Bash & Python</li>
+                        <li>Git Version Control</li>
+                        <li>IoT Integration</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-<section id="education" class="py-32 px-6 bg-white/[0.01]">
-    <div class="max-w-7xl mx-auto">
-        <h2 class="text-4xl font-black mb-16 text-center tracking-tight">Education & <span class="text-emerald-500">Certifications</span></h2>
-        
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="card-blur p-8 rounded-3xl text-left border-b-4 border-emerald-500">
-                <h3 class="text-xl font-bold mb-2 uppercase text-emerald-500">BEng (Hons) Cyber Security & Digital Forensics (2:1)</h3>
-                <p class="text-lg font-bold text-gray-200">University of the West of Scotland</p>
-                <p class="text-sm font-bold text-gray-400 uppercase tracking-tighter mt-2">Class of 2025</p>
-            </div>
-
-            <div class="card-blur p-8 rounded-3xl text-left border-b-4 border-emerald-500">
-                <h3 class="text-xl font-bold mb-2 uppercase text-emerald-500">HND/HNC Cyber Security, Networking & Digital Forensics</h3>
-                <p class="text-lg font-bold text-gray-200">New College Lanarkshire</p>
-                <p class="text-sm font-bold text-gray-400 uppercase tracking-tighter mt-2">Graduated 2003</p>
-            </div>
-        </div>
-    </div>
-</section>
-
     <section id="projects" class="py-32 px-6 bg-white/[0.01]">
-    <div class="max-w-7xl mx-auto">
-        <h2 class="text-4xl font-black mb-16 text-center tracking-tight">Technical <span class="text-emerald-500">Projects</span></h2>
-        
-        <div class="grid lg:grid-cols-2 gap-12">
-            <div class="card-blur p-10 rounded-3xl">
-                <h3 class="text-2xl font-bold text-emerald-500 mb-6">Enterprise Home Lab & SOC Deployment</h3>
-                <div class="space-y-4 text-gray-400">
-                    <p><strong>Architecture:</strong> Multi-layered network using TP-Link Omada hardware with VLANs and Class B addressing for strict traffic isolation.</p>
-                    <p><strong>Connectivity:</strong> Bypassed Double-NAT using Cloudflare Tunnels for secure, authenticated access without open ports.</p>
-                    <p><strong>SOC:</strong> Built a monitoring environment with Docker, Glances, and File Browser for secure data management.</p>
-                    <p><strong>Reliability:</strong> Implemented Uptime Kuma for proactive incident response and asset monitoring.</p>
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-black mb-20 text-center tracking-tight uppercase">Professional & <span class="text-emerald-500">Personal Projects</span></h2>
+            
+            <div class="mb-20">
+                <div class="mb-10 max-w-3xl">
+                    <h3 class="text-xl font-black uppercase tracking-widest text-emerald-500/50 mb-4 border-l-4 border-emerald-500 pl-6">Major Professional Projects</h3>
+                    <p class="text-gray-400 leading-relaxed">Infrastructure projects spanning Tier-3 data centers and national energy leaders.</p>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="card-blur p-8 rounded-[2rem] border border-white/5">
+                        <h4 class="text-2xl font-black text-emerald-500 mb-2">Data Center Security Auditing</h4>
+                        <p class="text-[10px] font-black text-gray-500 mb-4 uppercase tracking-[0.2em]">Linlithgow Site</p>
+                        <p class="text-gray-400 text-sm">Evaluating physical-to-digital perimeters for high-tier environments.</p>
+                    </div>
+                    <div class="card-blur p-8 rounded-[2rem] border border-white/5">
+                        <h4 class="text-2xl font-black text-emerald-500 mb-2">Tiger Teaming & Social Engineering</h4>
+                        <p class="text-[10px] font-black text-gray-500 mb-4 uppercase tracking-[0.2em]">Exxon Mobil (UK)</p>
+                        <p class="text-gray-400 text-sm">Conducted unauthorized breach attempts to test physical security response times.</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="card-blur p-10 rounded-3xl">
-                <h3 class="text-2xl font-bold text-emerald-500 mb-6">IoT & Automation Engineering</h3>
-                <div class="space-y-4 text-gray-400">
-                    <p><strong>Home Assistant:</strong> Full-scale automation system integrating various IoT protocols into a unified management dashboard.</p>
-                    <p><strong>Hardware:</strong> Managed deployment within a custom-built loft office, prioritizing network efficiency and device security.</p>
-                    <p><strong>Web Presence:</strong> Developed this portfolio using Tailwind CSS, prioritizing responsive design and clean architecture.</p>
+            <div class="mt-32">
+                <div class="mb-10 max-w-3xl">
+                    <h3 class="text-xl font-black uppercase tracking-widest text-emerald-500/50 mb-4 border-l-4 border-emerald-500 pl-6">Personal Research & Development</h3>
+                    <p class="text-gray-400 leading-relaxed">Offensive security research and enterprise-grade SOC labs.</p>
                 </div>
-            </div>
-
-            <div class="card-blur p-10 rounded-3xl border border-emerald-500/10 mt-12">
-            <div class="grid lg:grid-cols-2 gap-12">
-                
-                <div>
-                    <h3 class="text-2xl font-bold text-emerald-500 mb-6">ACME-OS Interactive Terminal</h3>
-                    <div class="space-y-4 text-gray-400">
-                        <p><strong>Environment:</strong> A standalone retro-themed terminal environment built with vanilla JavaScript and custom CSS logic.</p>
-                        <p><strong>Interactive:</strong> Features a custom command-line processor allowing users to interact with a simulated system shell.</p>
-                        <p><strong>Visuals:</strong> Implements CRT scanline effects, phosphor glow, and flicker animations for an authentic 80s computing experience.</p>
-
-                        <div class="pt-6">
-                            <a href="https://nisbet6098.github.io/acmeos/" 
-                               target="_blank" 
-                               class="inline-block bg-emerald-500 hover:bg-emerald-600 text-black font-bold py-3 px-8 rounded-2xl transition-all transform hover:scale-105">
-                                Launch System →
-                            </a>
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="card-blur p-8 rounded-[2rem]">
+                        <h4 class="text-2xl font-black text-emerald-500 mb-4">Enterprise Home Lab & SOC</h4>
+                        <div class="space-y-3 text-gray-400 text-sm">
+                            <p><strong>SIEM:</strong> Wazuh log analysis and file integrity checking.</p>
+                            <p><strong>Infrastructure:</strong> Dockerized environment hosting Glances, Portainer, and Uptime Kuma.</p>
+                        </div>
+                    </div>
+                    <div class="card-blur p-8 rounded-[2rem]">
+                        <h4 class="text-2xl font-black text-emerald-500 mb-4">Automation & Custom Suites</h4>
+                        <div class="space-y-3 text-gray-400 text-sm">
+                            <p><strong>PerfectDojo:</strong> Custom web suite with integrated reconnaissance scripts.</p>
+                            <p><strong>Web:</strong> Engineered the NTCyber site using Tailwind and Vanilla JS.</p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2 card-blur p-10 rounded-[2.5rem] mt-8 border-emerald-500/20">
+                        <div class="grid md:grid-cols-2 gap-12">
+                            <div>
+                                <h4 class="text-2xl font-black text-emerald-500 mb-6">ACME-OS Interactive Terminal</h4>
+                                <p class="text-gray-400 text-sm mb-8 leading-loose">An immersive retro-themed terminal environment built with Vanilla JS.</p>
+                                <a href="https://nisbet6098.github.io/acmeos/" target="_blank" class="inline-block bg-emerald-500 hover:bg-emerald-600 text-black font-black py-4 px-10 rounded-2xl transition-all transform hover:scale-105 uppercase text-xs tracking-widest">Launch System →</a>
+                            </div>
+                            <div class="md:border-l border-white/5 md:pl-12 flex flex-col justify-center">
+                                <h4 class="text-xl font-black text-white mb-4">Nexus Field Manual</h4>
+                                <p class="text-gray-400 text-sm mb-6">Technical guide to the ACME-OS filesystem.</p>
+                                <a href="https://nisbet6098.github.io/acmeos/manual.pdf" download class="inline-block border border-emerald-500/50 text-emerald-500 hover:bg-emerald-500 hover:text-black font-black py-3 px-8 rounded-xl transition-all text-xs tracking-widest uppercase text-center">Download PDF</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="flex flex-col justify-between border-t lg:border-t-0 lg:border-l border-emerald-500/10 pt-10 lg:pt-0 lg:pl-12">
-                    <div>
-                        <h3 class="text-2xl font-bold text-emerald-500 mb-6">Nexus Field Manual</h3>
-                        <div class="space-y-4 text-gray-400">
-                            <p><strong>The Mission:</strong> Investigate the anomaly on node_107. Decrypt logs, escalate privileges, and gain root access through system exploits.</p>
-                            <p><strong>Content:</strong> A comprehensive guide to the internal filesystem and custom CLI commands including <code>nmap</code>, <code>neofetch</code>, and the <code>decode</code> engine.</p>
-                        </div>
-                    </div>
-
-                    <div class="pt-6">
-                        <a href="https://nisbet6098.github.io/acmeos/manual.pdf" 
-                           download 
-                           class="inline-block border-2 border-emerald-500 hover:bg-emerald-500 hover:text-black text-emerald-500 font-bold py-3 px-8 rounded-2xl transition-all transform hover:scale-105">
-                            Download Briefing ↓
-                        </a>
-                    </div>
-                </div>
-
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <section id="contact" class="py-32 px-6">
-        <div class="max-w-6xl mx-auto card-blur p-12 md:p-20 rounded-[3rem] border border-emerald-500/20">
-            <h2 class="text-4xl font-black mb-4 text-center">Get in <span class="text-emerald-500">Touch</span></h2>
-            <p class="text-gray-500 text-center mb-16 uppercase text-sm font-bold tracking-widest leading-loose">
-                d.nisbet@ntcyber.com<br>
-                07759 206195<br>
-                Airdrie, ML6 8LA
+        <div class="max-w-4xl mx-auto card-blur p-12 md:p-20 rounded-[3rem] border border-emerald-500/20">
+            <h2 class="text-4xl font-black mb-4 text-center uppercase tracking-tight">Get in <span class="text-emerald-500">Touch</span></h2>
+            <p class="text-gray-500 text-center mb-16 uppercase text-xs font-black tracking-[0.3em] leading-loose">
+                d.nisbet@ntcyber.com<br>07759 206195<br>Airdrie, ML6 8LA
             </p>
-            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6 max-w-2xl mx-auto">
-                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+            
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                <input type="hidden" name="access_key" value="54f2a715-2f2b-4871-9d72-099182bc0467">
+                <input type="hidden" name="from_name" value="Portfolio-AcmeOS">
+                <input type="hidden" name="subject" value="New Inquiry: Portfolio-AcmeOS System">
+                <input type="hidden" name="redirect" value="https://portfolio.ntcyber.com">
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
                 <div class="grid md:grid-cols-2 gap-6">
-                    <input type="text" name="name" placeholder="Name" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-emerald-500 transition text-white">
-                    <input type="email" name="email" placeholder="Email" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-emerald-500 transition text-white">
+                    <input type="text" name="name" placeholder="Full Name" required 
+                           class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-emerald-500 transition text-white font-bold">
+                    <input type="email" name="email" placeholder="Email Address" required 
+                           class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-emerald-500 transition text-white font-bold">
                 </div>
-                <textarea name="message" rows="5" placeholder="Tell me about your security needs..." required class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-emerald-500 transition text-white"></textarea>
-                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 py-6 rounded-2xl font-black uppercase tracking-widest transition shadow-xl shadow-emerald-900/30">Send Consultation Request</button>
+                
+                <textarea name="message" rows="5" placeholder="Security requirements or project inquiry..." required 
+                          class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-emerald-500 transition text-white font-bold"></textarea>
+                
+                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 py-6 rounded-2xl font-black uppercase tracking-[0.2em] transition shadow-2xl shadow-emerald-900/30 transform hover:scale-[1.01]">
+                    Execute Submission
+                </button>
             </form>
         </div>
     </section>
 
-    <footer class="py-16 border-t border-white/10 text-center">
-        <p class="text-gray-500 text-sm">&copy; 2026 David Nisbet | NTCyber Ltd | All Rights Reserved.</p>
+    <footer class="py-20 border-t border-white/5 bg-black/50 text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-center gap-12 mb-12">
+                <a href="https://www.linkedin.com/in/ntcyber/" target="_blank" class="text-gray-500 hover:text-emerald-500 transition-all"><i class="fab fa-linkedin text-3xl"></i></a>
+                <a href="https://github.com/nisbet6098" target="_blank" class="text-gray-500 hover:text-emerald-500 transition-all"><i class="fab fa-github text-3xl"></i></a>
+                <a href="https://ntcyber.com" target="_blank" class="text-gray-500 hover:text-emerald-500 transition-all"><i class="fas fa-globe text-3xl"></i></a>
+            </div>
+            <p class="text-gray-600 text-[10px] font-black uppercase tracking-[0.4em]">
+                &copy; 2026 David Nisbet <span class="mx-3 text-emerald-500">/</span> NTCyber Ltd
+            </p>
+        </div>
     </footer>
 
     <script>
@@ -313,20 +309,20 @@
             const body = document.body;
             const icon = document.getElementById('theme-icon');
             if (body.classList.contains('dark')) {
-                body.classList.remove('dark');
-                body.classList.add('light');
+                body.classList.replace('dark', 'light');
                 icon.classList.replace('fa-sun', 'fa-moon');
             } else {
-                body.classList.remove('light');
-                body.classList.add('dark');
+                body.classList.replace('light', 'dark');
                 icon.classList.replace('fa-moon', 'fa-sun');
             }
         }
+
         const text = document.getElementById('typewriter');
-        const roles = ["Security Consultant", "Penetration Tester", "Military Veteran"];
+        const roles = ["Security Consultant", "Penetration Tester", "Security Engineer", "Security Architect"];
         let roleIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
+
         function type() {
             const currentRole = roles[roleIndex];
             if (isDeleting) {
@@ -336,6 +332,7 @@
                 text.textContent = currentRole.substring(0, charIndex + 1);
                 charIndex++;
             }
+
             if (!isDeleting && charIndex === currentRole.length) {
                 isDeleting = true;
                 setTimeout(type, 2500);
