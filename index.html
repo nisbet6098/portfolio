@@ -19,13 +19,16 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
         body { font-family: 'Inter', sans-serif; transition: all 0.3s ease; scroll-behavior: smooth; }
+        
+        /* FIXED NAME GRADIENT VISIBILITY */
         .text-gradient {
             background: linear-gradient(135deg, #ffffff 30%, #10b981 100%);
-            -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
         }
-        .dark .text-gradient {
-            background: linear-gradient(135deg, #ffffff 30%, #10b981 100%);
-        }
+        
         .card-blur {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(10px);
@@ -89,8 +92,8 @@
                     <h2 class="text-4xl font-black mb-4 uppercase tracking-tight">The Strategic Advantage</h2>
                     <h3 class="text-emerald-500 font-black text-xs uppercase tracking-[0.3em] mb-8">Personal Statement</h3>
                     <div class="space-y-6 text-gray-400 text-lg leading-relaxed">
-                        <p>I excel at bridging the gap between technical defense and organizational compliance. With 11 years of field experience, I specialize in manual penetration testing and implementing security frameworks like <span class="text-white font-bold">Cyber Essentials, NIST, and ISO 27001.</span></p>
-                        <p>My career is defined by a <span class="text-white font-bold">"Security-First"</span> approach. Whether directing operations at NTCyber Ltd or serving in high-pressure operational environments with the British Army, I prioritize mission-critical data integrity.</p>
+                        <p>I excel at bridging the gap between technical defense and organizational compliance. With over a decade of field experience, I specialize in manual penetration testing and implementing security frameworks like <span class="text-white font-bold">Cyber Essentials, NIST, and ISO 27001.</span></p>
+                        <p>My career is defined by a <span class="text-white font-bold">"Security-First"</span> approach. Whether directing operations at NTCyber Ltd or managing critical communications for the British Army, I prioritize mission-critical data integrity and infrastructure resilience.</p>
                     </div>
                 </div>
             </div>
@@ -112,10 +115,10 @@
                             <span class="bg-emerald-500 text-black px-5 py-2 rounded-xl font-black text-xs uppercase tracking-widest">2016 - Present</span>
                         </div>
                         <ul class="grid md:grid-cols-2 gap-6 text-gray-400">
-                            <li class="flex items-start"><i class="fas fa-check-circle text-emerald-500 mt-1 mr-4"></i> <strong>Cyber Essentials:</strong> Leading full certification lifecycles for CE and CE Plus.</li>
-                            <li class="flex items-start"><i class="fas fa-check-circle text-emerald-500 mt-1 mr-4"></i> <strong>Vulnerability Mgmt:</strong> Technical audits of Firewalls, Access Control, and Patching.</li>
-                            <li class="flex items-start"><i class="fas fa-check-circle text-emerald-500 mt-1 mr-4"></i> <strong>Offensive Ops:</strong> Manual penetration testing across networks and applications.</li>
-                            <li class="flex items-start"><i class="fas fa-check-circle text-emerald-500 mt-1 mr-4"></i> <strong>Social Engineering:</strong> Designing phishing/vishing campaigns for staff awareness.</li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-emerald-500 mt-1 mr-4"></i> <span><strong>Cyber Essentials:</strong> Leading full certification lifecycles for CE and CE Plus.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-emerald-500 mt-1 mr-4"></i> <span><strong>Vulnerability Mgmt:</strong> Technical audits of Firewalls, Access Control, and Patching.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-emerald-500 mt-1 mr-4"></i> <span><strong>Offensive Ops:</strong> Manual penetration testing across networks and applications.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-emerald-500 mt-1 mr-4"></i> <span><strong>Social Engineering:</strong> Designing phishing/vishing campaigns for staff awareness.</span></li>
                         </ul>
                     </div>
                 </div>
@@ -125,14 +128,16 @@
                     <div class="relative z-10">
                         <div class="flex flex-wrap justify-between items-start mb-10">
                             <div>
-                                <h3 class="text-3xl font-black mb-2">Infantry / CMT</h3>
-                                <p class="text-emerald-500 text-xl font-bold uppercase tracking-widest">British Army</p>
+                                <h3 class="text-3xl font-black mb-2">Communications Systems Operator</h3>
+                                <p class="text-emerald-500 text-xl font-bold uppercase tracking-widest">British Army | Royal Corps of Signals</p>
                             </div>
                             <span class="bg-white/10 text-white px-5 py-2 rounded-xl font-black text-xs uppercase tracking-widest">2009 - 2014</span>
                         </div>
                         <ul class="grid md:grid-cols-2 gap-6 text-gray-400">
-                            <li class="flex items-start"><i class="fas fa-shield-alt text-emerald-600 mt-1 mr-4"></i> <strong>Resilience:</strong> Maintaining operational focus in high-stress Incident Response scenarios.</li>
-                            <li class="flex items-start"><i class="fas fa-shield-alt text-emerald-600 mt-1 mr-4"></i> <strong>Precision:</strong> 100% accuracy in mission-critical tasks through rigorous SOPs.</li>
+                            <li class="flex items-start"><i class="fas fa-shield-alt text-emerald-600 mt-1 mr-4"></i> <span><strong>Critical Comms:</strong> Managed high-availability secure tactical voice and data networks.</span></li>
+                            <li class="flex items-start"><i class="fas fa-shield-alt text-emerald-600 mt-1 mr-4"></i> <span><strong>Resilience:</strong> Maintaining operational focus in high-stress Incident Response scenarios.</span></li>
+                            <li class="flex items-start"><i class="fas fa-shield-alt text-emerald-600 mt-1 mr-4"></i> <span><strong>Precision:</strong> 100% accuracy in mission-critical tasks through rigorous encryption SOPs.</span></li>
+                            <li class="flex items-start"><i class="fas fa-shield-alt text-emerald-600 mt-1 mr-4"></i> <span><strong>Tactical Comms:</strong> Expert in HF/VHF and Satellite link deployment in austere environments.</span></li>
                         </ul>
                     </div>
                 </div>
@@ -140,14 +145,14 @@
                 <div class="card-blur p-8 md:p-12 rounded-[2.5rem]">
                     <div class="flex flex-wrap justify-between items-start mb-10">
                         <div>
-                            <h3 class="text-3xl font-black mb-2">Security Systems Engineer</h3>
+                            <h3 class="text-3xl font-black mb-2">Security Systems & Infrastructure Architect</h3>
                             <p class="text-emerald-500 text-xl font-bold uppercase tracking-widest">LLC Technical</p>
                         </div>
                         <span class="bg-white/10 text-white px-5 py-2 rounded-xl font-black text-xs uppercase tracking-widest">2006 - 2009</span>
                     </div>
                     <ul class="grid md:grid-cols-2 gap-6 text-gray-400">
-                        <li class="flex items-start"><i class="fas fa-tools text-gray-600 mt-1 mr-4"></i> <strong>Infrastructure:</strong> Deploying IPv4/v6 CCTV and physical Access Control (Paxton).</li>
-                        <li class="flex items-start"><i class="fas fa-tools text-gray-600 mt-1 mr-4"></i> <strong>Deployment:</strong> Full-cycle installation of CAT5/6 and fiber optic backbones.</li>
+                        <li class="flex items-start"><i class="fas fa-tools text-gray-600 mt-1 mr-4"></i> <span><strong>Unified Security:</strong> Deploying complex IPv4/v6 CCTV and physical Access Control (Paxton).</span></li>
+                        <li class="flex items-start"><i class="fas fa-tools text-gray-600 mt-1 mr-4"></i> <span><strong>Backbone Engineering:</strong> Full-cycle installation of CAT5e/6 and fiber optic backbones.</span></li>
                     </ul>
                 </div>
             </div>
@@ -155,49 +160,75 @@
     </section>
 
     <section id="skills" class="py-32 px-6">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-4xl font-black mb-20 uppercase tracking-[0.2em]">Technical <span class="text-emerald-500">Arsenal</span></h2>
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-black mb-20 text-center uppercase tracking-[0.2em]">Technical <span class="text-emerald-500">Arsenal</span></h2>
+            
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="card-blur p-8 rounded-3xl text-left border-b-4 border-emerald-500">
-                    <h3 class="text-xl font-black mb-6 uppercase text-emerald-500 tracking-widest">Compliance</h3>
-                    <ul class="space-y-3 text-xs font-black text-gray-400 uppercase tracking-widest">
-                        <li>Cyber Essentials & Plus</li>
-                        <li>IASME Governance</li>
-                        <li>NIST Framework</li>
-                        <li>ISO 27001 Auditing</li>
+                
+                <div class="card-blur p-8 rounded-3xl text-left border-t-4 border-emerald-500/30">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-file-shield text-2xl text-emerald-500 mr-4"></i>
+                        <h3 class="text-xl font-black uppercase text-white tracking-widest">Compliance</h3>
+                    </div>
+                    <ul class="space-y-4 text-[10px] font-black text-gray-400 uppercase tracking-[0.15em]">
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>Cyber Essentials & Plus</span> <span class="text-emerald-500/50">Lead</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>IASME Governance</span> <span class="text-emerald-500/50">Cert</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>NIST Framework</span> <span class="text-emerald-500/50">Audit</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>ISO 27001</span> <span class="text-emerald-500/50">Internal</span></li>
                     </ul>
                 </div>
-                <div class="card-blur p-8 rounded-3xl text-left border-b-4 border-emerald-500">
-                    <h3 class="text-xl font-black mb-6 uppercase text-emerald-500 tracking-widest">Offensive</h3>
-                    <ul class="space-y-3 text-xs font-black text-gray-400 uppercase tracking-widest">
-                        <li>Tiger Teaming</li>
-                        <li>Network Pen-Testing</li>
-                        <li>Kali & Metasploit</li>
-                        <li>Nessus Pro</li>
+
+                <div class="card-blur p-8 rounded-3xl text-left border-t-4 border-red-500/30">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-user-secret text-2xl text-red-500 mr-4"></i>
+                        <h3 class="text-xl font-black uppercase text-white tracking-widest">Offensive</h3>
+                    </div>
+                    <ul class="space-y-4 text-[10px] font-black text-gray-400 uppercase tracking-[0.15em]">
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>Tiger Teaming</span> <i class="fas fa-bolt text-red-500/50"></i></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>Social Engineering</span> <i class="fas fa-brain text-red-500/50"></i></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>Network Pen-Testing</span> <i class="fas fa-network-wired text-red-500/50"></i></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>OSINT Research</span> <i class="fas fa-search text-red-500/50"></i></li>
                     </ul>
                 </div>
-                <div class="card-blur p-8 rounded-3xl text-left border-b-4 border-emerald-500">
-                    <h3 class="text-xl font-black mb-6 uppercase text-emerald-500 tracking-widest">Defensive</h3>
-                    <ul class="space-y-3 text-xs font-black text-gray-400 uppercase tracking-widest">
-                        <li>Wazuh SIEM / SOC</li>
-                        <li>TP-Link Omada (VLAN)</li>
-                        <li>Docker Virtualization</li>
-                        <li>Zero Trust Arch</li>
+
+                <div class="card-blur p-8 rounded-3xl text-left border-t-4 border-emerald-500/30 relative overflow-hidden">
+                    <div class="absolute top-4 right-4 flex items-center">
+                        <span class="relative flex h-2 w-2">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                        </span>
+                        <span class="ml-2 text-[8px] font-black text-emerald-500 tracking-tighter uppercase">Live SOC</span>
+                    </div>
+                    
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-satellite-dish text-2xl text-emerald-500 mr-4"></i>
+                        <h3 class="text-xl font-black uppercase text-white tracking-widest">Defensive</h3>
+                    </div>
+                    <ul class="space-y-4 text-[10px] font-black text-gray-400 uppercase tracking-[0.15em]">
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>Wazuh SIEM / SOC</span> <span class="text-white/20">Active</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>Traefik Reverse Proxy</span> <span class="text-white/20">Deployed</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>Vaultwarden</span> <span class="text-white/20">AES-256</span></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>Zero Trust Access</span> <span class="text-white/20">IAM</span></li>
                     </ul>
                 </div>
-                <div class="card-blur p-8 rounded-3xl text-left border-b-4 border-emerald-500">
-                    <h3 class="text-xl font-black mb-6 uppercase text-emerald-500 tracking-widest">Development</h3>
-                    <ul class="space-y-3 text-xs font-black text-gray-400 uppercase tracking-widest">
-                        <li>HTML5 / JS / Tailwind</li>
-                        <li>Bash & Python</li>
-                        <li>Git Version Control</li>
-                        <li>IoT Integration</li>
+
+                <div class="card-blur p-8 rounded-3xl text-left border-t-4 border-emerald-500/30">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-microchip text-2xl text-emerald-500 mr-4"></i>
+                        <h3 class="text-xl font-black uppercase text-white tracking-widest">Infra / Dev</h3>
+                    </div>
+                    <ul class="space-y-4 text-[10px] font-black text-gray-400 uppercase tracking-[0.15em]">
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>TP-Link Omada SDN</span> <i class="fas fa-server text-white/10"></i></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>Docker Swarm / Compose</span> <i class="fas fa-box text-white/10"></i></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>Tailwind / Vanilla JS</span> <i class="fas fa-code text-white/10"></i></li>
+                        <li class="flex justify-between border-b border-white/5 pb-2"><span>Fiber / Cat6 Backbone</span> <i class="fas fa-bolt text-white/10"></i></li>
                     </ul>
                 </div>
+
             </div>
         </div>
     </section>
-
+                  
     <section id="projects" class="py-32 px-6 bg-white/[0.01]">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-4xl font-black mb-20 text-center tracking-tight uppercase">Professional & <span class="text-emerald-500">Personal Projects</span></h2>
@@ -205,18 +236,31 @@
             <div class="mb-20">
                 <div class="mb-10 max-w-3xl">
                     <h3 class="text-xl font-black uppercase tracking-widest text-emerald-500/50 mb-4 border-l-4 border-emerald-500 pl-6">Major Professional Projects</h3>
-                    <p class="text-gray-400 leading-relaxed">Infrastructure projects spanning Tier-3 data centers and national energy leaders.</p>
+                    <p class="text-gray-400 leading-relaxed">Infrastructure and auditing projects for CNI (Critical National Infrastructure) and enterprise leaders.</p>
                 </div>
                 <div class="grid lg:grid-cols-2 gap-8">
                     <div class="card-blur p-8 rounded-[2rem] border border-white/5">
-                        <h4 class="text-2xl font-black text-emerald-500 mb-2">Data Center Security Auditing</h4>
-                        <p class="text-[10px] font-black text-gray-500 mb-4 uppercase tracking-[0.2em]">Linlithgow Site</p>
-                        <p class="text-gray-400 text-sm">Evaluating physical-to-digital perimeters for high-tier environments.</p>
+                        <h4 class="text-2xl font-black text-emerald-500 mb-2">Security Audit</h4>
+                        <p class="text-[10px] font-black text-gray-500 mb-4 uppercase tracking-[0.2em]">Exxon Mobil (UK) | Tiger Teaming</p>
+                        <p class="text-gray-400 text-sm">Conducted unauthorized breach attempts and social engineering tests to evaluate physical security response times and perimeter integrity.</p>
                     </div>
+
                     <div class="card-blur p-8 rounded-[2rem] border border-white/5">
-                        <h4 class="text-2xl font-black text-emerald-500 mb-2">Tiger Teaming & Social Engineering</h4>
-                        <p class="text-[10px] font-black text-gray-500 mb-4 uppercase tracking-[0.2em]">Exxon Mobil (UK)</p>
-                        <p class="text-gray-400 text-sm">Conducted unauthorized breach attempts to test physical security response times.</p>
+                        <h4 class="text-2xl font-black text-emerald-500 mb-2">Critical Infrastructure Monitoring</h4>
+                        <p class="text-[10px] font-black text-gray-500 mb-4 uppercase tracking-[0.2em]">Network Rail | Remote Site Security</p>
+                        <p class="text-gray-400 text-sm">Engineered and installed CCTV monitoring, PIR sensors, and spot lighting across remote CNI sites. Configured secure DVRs for real-time remote surveillance.</p>
+                    </div>
+
+                    <div class="card-blur p-8 rounded-[2rem] border border-white/5">
+                        <h4 class="text-2xl font-black text-emerald-500 mb-2">Enterprise Retail Security</h4>
+                        <p class="text-[10px] font-black text-gray-500 mb-4 uppercase tracking-[0.2em]">Sainsbury's | Scotland-Wide Deployment</p>
+                        <p class="text-gray-400 text-sm">Led security installations for new store builds across Scotland. Managed CCTV, alarm systems, and panic-response hardware for distribution centers and flagship stores.</p>
+                    </div>
+
+                    <div class="card-blur p-8 rounded-[2rem] border border-white/5">
+                        <h4 class="text-2xl font-black text-emerald-500 mb-2">Data Center Security Auditing</h4>
+                        <p class="text-[10px] font-black text-gray-500 mb-4 uppercase tracking-[0.2em]">Linlithgow Site | Tier-3 Evaluation</p>
+                        <p class="text-gray-400 text-sm">Evaluating physical-to-digital perimeters for high-tier environments, ensuring compliance with mission-critical security standards.</p>
                     </div>
                 </div>
             </div>
@@ -224,41 +268,45 @@
             <div class="mt-32">
                 <div class="mb-10 max-w-3xl">
                     <h3 class="text-xl font-black uppercase tracking-widest text-emerald-500/50 mb-4 border-l-4 border-emerald-500 pl-6">Personal Research & Development</h3>
-                    <p class="text-gray-400 leading-relaxed">Offensive security research and enterprise-grade SOC labs.</p>
+                    <p class="text-gray-400 leading-relaxed">Offensive security research, Omada enterprise networking, and real-time SIEM monitoring.</p>
                 </div>
                 <div class="grid lg:grid-cols-2 gap-8">
                     <div class="card-blur p-8 rounded-[2rem]">
                         <h4 class="text-2xl font-black text-emerald-500 mb-4">Enterprise Home Lab & SOC</h4>
                         <div class="space-y-3 text-gray-400 text-sm">
-                            <p><strong>SIEM:</strong> Wazuh log analysis and file integrity checking.</p>
-                            <p><strong>Infrastructure:</strong> Dockerized environment hosting Glances, Portainer, and Uptime Kuma.</p>
+                            <p><strong>SIEM:</strong> Wazuh log analysis, file integrity monitoring, and real-time threat detection.</p>
+                            <p><strong>Network:</strong> Full Omada Enterprise stack with dedicated security CCTV and VLAN segmentation.</p>
+                            <p><strong>Infrastructure:</strong> Dockerized environment hosting Glances, Portainer, Uptime Kuma, and NetAlertX.</p>
                         </div>
                     </div>
+
                     <div class="card-blur p-8 rounded-[2rem]">
                         <h4 class="text-2xl font-black text-emerald-500 mb-4">Automation & Custom Suites</h4>
                         <div class="space-y-3 text-gray-400 text-sm">
-                            <p><strong>PerfectDojo:</strong> Custom web suite with integrated reconnaissance scripts.</p>
-                            <p><strong>Web:</strong> Engineered the NTCyber site using Tailwind and Vanilla JS.</p>
+                            <p><strong>PerfectDojo:</strong> Custom web suite with integrated reconnaissance scripts for automated data gathering.</p>
+                            <p><strong>DevOps:</strong> Full-cycle development using VS Code and GitHub for the NTCyber ecosystem and Portfolio.</p>
+                            <p><strong>Web:</strong> Engineered high-performance sites using Tailwind CSS and Vanilla JavaScript.</p>
                         </div>
                     </div>
+
                     <div class="lg:col-span-2 card-blur p-10 rounded-[2.5rem] mt-8 border-emerald-500/20">
                         <div class="grid md:grid-cols-2 gap-12">
                             <div>
                                 <h4 class="text-2xl font-black text-emerald-500 mb-6">ACME-OS Interactive Terminal</h4>
-                                <p class="text-gray-400 text-sm mb-8 leading-loose">An immersive retro-themed terminal environment built with Vanilla JS.</p>
-                                <a href="https://nisbet6098.github.io/acmeos/" target="_blank" class="inline-block bg-emerald-500 hover:bg-emerald-600 text-black font-black py-4 px-10 rounded-2xl transition-all transform hover:scale-105 uppercase text-xs tracking-widest">Launch System →</a>
+                                <p class="text-gray-400 text-sm mb-8 leading-loose">An immersive retro-themed terminal environment and filesystem explorer built with Vanilla JS. Hosted locally on the SOC server.</p>
+                                <a href="https://acmeos.ntcyber.com" target="_blank" class="inline-block bg-emerald-500 hover:bg-emerald-600 text-black font-black py-4 px-10 rounded-2xl transition-all transform hover:scale-105 uppercase text-xs tracking-widest">Launch System →</a>
                             </div>
                             <div class="md:border-l border-white/5 md:pl-12 flex flex-col justify-center">
                                 <h4 class="text-xl font-black text-white mb-4">Nexus Field Manual</h4>
-                                <p class="text-gray-400 text-sm mb-6">Technical guide to the ACME-OS filesystem.</p>
-                                <a href="https://nisbet6098.github.io/acmeos/manual.pdf" download class="inline-block border border-emerald-500/50 text-emerald-500 hover:bg-emerald-500 hover:text-black font-black py-3 px-8 rounded-xl transition-all text-xs tracking-widest uppercase text-center">Download PDF</a>
+                                <p class="text-gray-400 text-sm mb-6">Technical walkthrough guide to the ACME-OS filesystem architecture.</p>
+                                <a href="https://acmeos.ntcyber.com/manual.pdf" download class="inline-block border border-emerald-500/50 text-emerald-500 hover:bg-emerald-500 hover:text-black font-black py-3 px-8 rounded-xl transition-all text-xs tracking-widest uppercase text-center">Download Walkthrough PDF</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section> 
 
     <section id="contact" class="py-32 px-6">
         <div class="max-w-4xl mx-auto card-blur p-12 md:p-20 rounded-[3rem] border border-emerald-500/20">
